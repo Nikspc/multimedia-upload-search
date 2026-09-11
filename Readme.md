@@ -38,10 +38,8 @@ A MERN stack application that allows authenticated users to upload and preview m
     npm run dev
     Runs on :-  http://localhost:5000
 
+- **Live URL:** https://multimedia-upload-search.vercel.app/
+
 - **Run Tests:**
     npm test
 - **Swagger UI:** http://localhost:5000/api/docs
-
-## Live URL
--Frontend (Vercel): 
-Backend:
