@@ -27,6 +27,8 @@ app.use(
   })
 );
 
+app.get("/health", (_, res) => res.json({ ok: true }));
+
 // 2. Rate Limiter (Must be placed BEFORE routes)
 const limiter = new RateLimiterMemory({ points: 50, duration: 60 });
 app.use(async (req, res, next) => {
@@ -50,7 +52,6 @@ app.use(async (req, res, next) => {
 });
 
 // 4. Routes
-app.get("/health", (_, res) => res.json({ ok: true }));
 app.use("/api/auth", authRoutes);
 app.use("/api/files", fileRoutes);
 
